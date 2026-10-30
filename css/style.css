@@ -1,10 +1,8 @@
-/* HN Quran Academy - Professional Website Styles */
-
 :root {
---primary: #126b45;
---primary-dark: #0b4930;
---gold: #e9b949;
---light: #f4faf6;
+--green: #105c40;
+--dark-green: #083c2b;
+--gold: #e7b94e;
+--light: #f3f8f4;
 --white: #ffffff;
 --text: #25352d;
 }
@@ -17,103 +15,249 @@
 
 html {
 scroll-behavior: smooth;
+scroll-padding-top: 80px;
 }
 
 body {
-font-family: Arial, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 color: var(--text);
 background: var(--white);
 line-height: 1.7;
 }
 
 header {
-background: var(--primary);
+background: linear-gradient(135deg, var(--dark-green), var(--green));
 color: var(--white);
 text-align: center;
-padding: 35px 18px;
+padding: 42px 18px;
 }
 
 header h1 {
-font-size: 32px;
+font-size: clamp(28px, 5vw, 44px);
 margin-bottom: 8px;
+letter-spacing: 0.5px;
 }
 
 header p {
 font-size: 17px;
 }
 
+.navbar {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 8px;
+padding: 14px;
+background: var(--white);
+border-bottom: 1px solid #e5eee8;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.navbar a {
+color: var(--green);
+text-decoration: none;
+font-weight: bold;
+padding: 8px 13px;
+border-radius: 6px;
+transition: 0.2s;
+}
+
+.navbar a:hover {
+background: var(--green);
+color: var(--white);
+}
+
 main {
-max-width: 1100px;
-margin: 0 auto;
-padding: 40px 20px;
+width: 100%;
+max-width: 1150px;
+margin: auto;
+padding: 24px;
 }
 
 section {
-background: var(--light);
-text-align: center;
-padding: 40px 20px;
+margin: 28px 0;
+padding: 42px 28px;
 border-radius: 16px;
+text-align: center;
 }
 
 section h2 {
-color: var(--primary);
-font-size: 28px;
-margin-bottom: 16px;
+color: var(--green);
+font-size: clamp(25px, 4vw, 34px);
+margin-bottom: 18px;
 }
 
 section p {
-max-width: 720px;
-margin: 0 auto;
-font-size: 17px;
+max-width: 760px;
+margin: 0 auto 16px;
+}
+
+.hero {
+background: linear-gradient(135deg, #f0f8f2, #fff8e8);
+padding-top: 65px;
+padding-bottom: 65px;
+border: 1px solid #e6eee7;
+}
+
+.hero p {
+font-size: 18px;
+margin-bottom: 28px;
+}
+
+.button {
+display: inline-block;
+background: var(--green);
+color: var(--white);
+padding: 13px 24px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+margin-top: 8px;
+transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+background: var(--dark-green);
+transform: translateY(-2px);
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+margin-top: 28px;
+}
+
+.card {
+background: var(--white);
+padding: 25px 20px;
+border: 1px solid #e1ebe3;
+border-radius: 12px;
+box-shadow: 0 5px 18px rgba(8, 60, 43, 0.06);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 9px 24px rgba(8, 60, 43, 0.12);
+}
+
+.card h3 {
+color: var(--green);
+font-size: 21px;
+margin-bottom: 12px;
+}
+
+.card p {
+margin-bottom: 8px;
+}
+
+.note {
+margin-top: 25px;
+}
+
+#courses,
+#fees {
+background: var(--light);
+}
+
+#teachers {
+background: #fffaf0;
+}
+
+#contact {
+background: var(--light);
+border: 1px solid #e1ebe3;
+}
+
+.contact-detail {
+overflow-wrap: anywhere;
+}
+
+.contact-detail a {
+color: var(--green);
 }
 
 footer {
-background: var(--primary-dark);
+background: var(--dark-green);
 color: var(--white);
 text-align: center;
-padding: 22px 15px;
-margin-top: 30px;
+padding: 28px 16px;
+margin-top: 25px;
 }
 
-a {
-color: var(--primary);
+footer p {
+margin: 5px 0;
 }
 
-img {
-display: block;
-max-width: 100%;
-height: auto;
+@media (max-width: 800px) {
+.cards {
+grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Mobile-friendly layout */
+main {
+    padding: 16px;
+}
 
-@media (max-width: 600px) {
+section {
+    padding: 32px 20px;
+}
+
+}
+
+@media (max-width: 520px) {
 header {
-padding: 26px 14px;
-}
-
-header h1 {
-    font-size: 25px;
+padding: 30px 14px;
 }
 
 header p {
     font-size: 15px;
 }
 
+.navbar {
+    gap: 4px;
+    padding: 9px 5px;
+}
+
+.navbar a {
+    font-size: 13px;
+    padding: 7px 8px;
+}
+
 main {
-    padding: 25px 12px;
+    padding: 10px;
 }
 
 section {
     padding: 28px 15px;
+    margin: 18px 0;
+    border-radius: 12px;
 }
 
-section h2 {
-    font-size: 23px;
+.hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-section p {
-    font-size: 15px;
+.hero p {
+    font-size: 16px;
 }
 
+.cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
 }
+
+.card {
+    padding: 22px 16px;
+}
+
+.button {
+    max-width: 100%;
+    padding: 12px 18px;
+}
+
+  }
