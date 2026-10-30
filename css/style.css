@@ -1,17 +1,119 @@
-/* HN Quran Academy - Main Stylesheet */
+/* HN Quran Academy - Professional Website Styles */
+
+:root {
+--primary: #126b45;
+--primary-dark: #0b4930;
+--gold: #e9b949;
+--light: #f4faf6;
+--white: #ffffff;
+--text: #25352d;
+}
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #243047;
-    background-color: #ffffff;
+font-family: Arial, sans-serif;
+color: var(--text);
+background: var(--white);
+line-height: 1.7;
+}
+
+header {
+background: var(--primary);
+color: var(--white);
+text-align: center;
+padding: 35px 18px;
+}
+
+header h1 {
+font-size: 32px;
+margin-bottom: 8px;
+}
+
+header p {
+font-size: 17px;
+}
+
+main {
+max-width: 1100px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+
+section {
+background: var(--light);
+text-align: center;
+padding: 40px 20px;
+border-radius: 16px;
+}
+
+section h2 {
+color: var(--primary);
+font-size: 28px;
+margin-bottom: 16px;
+}
+
+section p {
+max-width: 720px;
+margin: 0 auto;
+font-size: 17px;
+}
+
+footer {
+background: var(--primary-dark);
+color: var(--white);
+text-align: center;
+padding: 22px 15px;
+margin-top: 30px;
+}
+
+a {
+color: var(--primary);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+/* Mobile-friendly layout */
+
+@media (max-width: 600px) {
+header {
+padding: 26px 14px;
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+main {
+    padding: 25px 12px;
+}
+
+section {
+    padding: 28px 15px;
+}
+
+section h2 {
+    font-size: 23px;
+}
+
+section p {
+    font-size: 15px;
+}
+
 }
