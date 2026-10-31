@@ -171,38 +171,95 @@
         <div class="cards">
 
             <article class="card">
-    <img src="teacher/file_0000000028e0821188f1ac731dc628ce.png"
-         alt="Muhammad Haris - CEO"
-         style="width: 100%; max-width: 240px; height: 180px; object-fit: contain; border-radius: 10px;">
+    <article class="card">
+    <h3>Male Quran Teachers</h3>
 
-    <h3>Muhammad Haris</h3>
-    <p><strong>CEO of HN Quran Academy</strong></p>
-    <p>Hafiz-e-Quran | Qari</p>
-    <p>8 Years of Teaching Experience</p>
+    <div style="text-align: center;">
+        <img id="teacher-slide"
+             src="teacher/file_0000000028e0821188f1ac731dc628ce.png"
+             alt="Muhammad Haris"
+             style="width: 100%; max-width: 280px; height: 220px; object-fit: contain; border-radius: 10px;">
 
-    <button onclick="document.getElementById('haris-profile').style.display='block'">
-        View Profile
-    </button>
+        <h3 id="teacher-name">Muhammad Haris</h3>
+        <p id="teacher-role">CEO of HN Quran Academy</p>
 
-    <div id="haris-profile" style="display: none; margin-top: 20px; text-align: left;">
-        <h3>About Muhammad Haris</h3>
-        <p><strong>Age:</strong> 25 Years</p>
-        <p><strong>Qualification:</strong> Hafiz-e-Quran and Qari</p>
-        <p><strong>Experience:</strong> 8 Years</p>
+        <button id="view-profile" type="button"
+                onclick="showTeacherProfile()">
+            View Profile
+        </button>
+    </div>
 
-        <p>
-            Muhammad Haris is the CEO of HN Quran Academy and a dedicated Quran teacher.
-            He has eight years of experience teaching the Holy Quran.
-            As a Hafiz-e-Quran and Qari, he focuses on correct Quran recitation
-            and Tajweed. He aims to create a friendly and supportive learning
-            environment for students of all ages.
-        </p>
+    <div id="teacher-profile"
+         style="display: none; margin-top: 20px; text-align: left;">
 
-        <button onclick="document.getElementById('haris-profile').style.display='none'">
+        <h3 id="profile-name"></h3>
+        <p id="profile-age"></p>
+        <p id="profile-experience"></p>
+        <p id="profile-qualification"></p>
+        <p id="profile-bio"></p>
+
+        <button type="button" onclick="closeTeacherProfile()">
             Close Profile
         </button>
     </div>
 </article>
+
+<script>
+const teachers = [
+    {
+        name: "Muhammad Haris",
+        role: "CEO of HN Quran Academy",
+        image: "teacher/file_0000000028e0821188f1ac731dc628ce.png",
+        age: "25 years",
+        experience: "8 years",
+        qualification: "Hafiz-e-Quran and Qari",
+        bio: "Muhammad Haris is the CEO of HN Quran Academy and a dedicated Quran teacher with eight years of teaching experience. As a Hafiz-e-Quran and Qari, he focuses on correct Quran recitation and Tajweed. He aims to provide a friendly and supportive learning environment for students."
+    },
+    {
+        name: "Muhammad Sohaib",
+        role: "Quran Teacher",
+        image: "teacher/file_000000002f148211af222a7a3b719456.png",
+        age: "22 years",
+        experience: "5 years",
+        qualification: "Hafiz-e-Quran",
+        bio: "Muhammad Sohaib is a dedicated Quran teacher with five years of teaching experience. As a Hafiz-e-Quran, he helps students learn and recite the Holy Quran. He aims to create a friendly and supportive learning environment and encourages students to improve through regular practice."
+    }
+];
+
+let currentTeacher = 0;
+
+function updateTeacherSlide() {
+    const teacher = teachers[currentTeacher];
+
+    document.getElementById("teacher-slide").src = teacher.image;
+    document.getElementById("teacher-slide").alt = teacher.name;
+    document.getElementById("teacher-name").textContent = teacher.name;
+    document.getElementById("teacher-role").textContent = teacher.role;
+}
+
+function showTeacherProfile() {
+    const teacher = teachers[currentTeacher];
+
+    document.getElementById("profile-name").textContent = teacher.name;
+    document.getElementById("profile-age").textContent = "Age: " + teacher.age;
+    document.getElementById("profile-experience").textContent =
+        "Teaching Experience: " + teacher.experience;
+    document.getElementById("profile-qualification").textContent =
+        "Qualification: " + teacher.qualification;
+    document.getElementById("profile-bio").textContent = teacher.bio;
+
+    document.getElementById("teacher-profile").style.display = "block";
+}
+
+function closeTeacherProfile() {
+    document.getElementById("teacher-profile").style.display = "none";
+}
+
+setInterval(function () {
+    currentTeacher = (currentTeacher + 1) % teachers.length;
+    updateTeacherSlide();
+}, 2000);
+</script>
 
             <article class="card">
                 <h3>Female Quran Teacher</h3>
