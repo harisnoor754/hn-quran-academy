@@ -133,6 +133,7 @@ margin-top: 28px;
 
 .card {
 background: var(--white);
+color: var(--text);
 padding: 25px 20px;
 border: 1px solid #e1ebe3;
 border-radius: 12px;
