@@ -411,7 +411,9 @@ function updateTeacherSlide() {
     const teacher = teachers[currentTeacher];
 
     document.getElementById("teacher-slide").src = teacher.image;
-    document.getElementById("teacher-slide").alt = teacher.name;
+    document.getElementById("teacher-slide").alt =
+    teacher.name + ", " + teacher.qualification +
+    ", Online Quran Teacher at HN Quran Academy";
 
     document.getElementById("teacher-name").textContent = teacher.name;
     document.getElementById("teacher-role").textContent = teacher.role;
