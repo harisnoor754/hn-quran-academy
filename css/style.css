@@ -435,3 +435,102 @@ header .academy-logo {
         font-size: 22px;
     }
 }
+/* HN Quran Academy Welcome Section */
+
+.welcome-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.welcome-content {
+    width: 100%;
+    max-width: 850px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.welcome-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.welcome-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.welcome-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.welcome-features span {
+    display: inline-block;
+    padding: 10px 14px;
+    background: #f3f8f4;
+    border: 1px solid #e7b94e;
+    border-radius: 10px;
+}
+
+.welcome-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.welcome-buttons .button {
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .welcome-hero {
+        padding: 15px 10px;
+        gap: 18px;
+    }
+
+    .welcome-content {
+        padding: 10px 5px;
+    }
+
+    .welcome-image {
+        width: 100%;
+    }
+
+    .welcome-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .welcome-buttons .button {
+        width: 100%;
+    }
+
+    .welcome-features {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
