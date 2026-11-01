@@ -509,7 +509,9 @@ function updateFemaleTeacherSlide() {
     const teacher = femaleTeachers[currentFemaleTeacher];
 
     document.getElementById("female-teacher-slide").src = teacher.image;
-    document.getElementById("female-teacher-slide").alt = teacher.name;
+    document.getElementById("female-teacher-slide").alt =
+    teacher.name + ", " + teacher.qualification +
+    ", Female Online Quran Teacher at HN Quran Academy";
 
     document.getElementById("female-teacher-name").textContent = teacher.name;
     document.getElementById("female-teacher-role").textContent = teacher.role;
