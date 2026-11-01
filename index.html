@@ -171,38 +171,48 @@
         <div class="cards">
 
             <article class="card">
+                <h2>Our Teachers</h2>
+
+<div class="cards">
+
     <article class="card">
-    <h3>Male Quran Teachers</h3>
+        <h3>Male Quran Teachers</h3>
 
-    <div style="text-align: center;">
-        <img id="teacher-slide"
-             src="teacher/file_0000000028e0821188f1ac731dc628ce.png"
-             alt="Muhammad Haris"
-             style="width: 100%; max-width: 280px; height: 220px; object-fit: contain; border-radius: 10px;">
+        <div style="text-align: center;">
 
-        <h3 id="teacher-name">Muhammad Haris</h3>
-        <p id="teacher-role">CEO of HN Quran Academy</p>
+            <img id="teacher-slide"
+                 src="teacher/file_0000000028e0821188f1ac731dc628ce.png"
+                 alt="Muhammad Haris"
+                 style="width: 100%; max-width: 280px; height: 220px; object-fit: contain; border-radius: 10px;">
 
-        <button id="view-profile" type="button"
-                onclick="showTeacherProfile()">
-            View Profile
-        </button>
-    </div>
+            <h3 id="teacher-name">Muhammad Haris</h3>
 
-    <div id="teacher-profile"
-         style="display: none; margin-top: 20px; text-align: left;">
+            <p id="teacher-role">CEO of HN Quran Academy</p>
 
-        <h3 id="profile-name"></h3>
-        <p id="profile-age"></p>
-        <p id="profile-experience"></p>
-        <p id="profile-qualification"></p>
-        <p id="profile-bio"></p>
+            <button id="view-profile" type="button"
+                    onclick="showTeacherProfile()">
+                View Profile
+            </button>
 
-        <button type="button" onclick="closeTeacherProfile()">
-            Close Profile
-        </button>
-    </div>
-</article>
+        </div>
+
+        <div id="teacher-profile"
+             style="display: none; margin-top: 20px; text-align: left;">
+
+            <h3 id="profile-name"></h3>
+            <p id="profile-age"></p>
+            <p id="profile-experience"></p>
+            <p id="profile-qualification"></p>
+            <p id="profile-bio"></p>
+
+            <button type="button" onclick="closeTeacherProfile()">
+                Close Profile
+            </button>
+
+        </div>
+    </article>
+
+</div>
 
 <script>
 const teachers = [
@@ -222,7 +232,25 @@ const teachers = [
         age: "22 years",
         experience: "5 years",
         qualification: "Hafiz-e-Quran",
-        bio: "Muhammad Sohaib is a dedicated Quran teacher with five years of teaching experience. As a Hafiz-e-Quran, he helps students learn and recite the Holy Quran. He aims to create a friendly and supportive learning environment and encourages students to improve through regular practice."
+        bio: "Muhammad Sohaib is a dedicated Quran teacher with five years of teaching experience. As a Hafiz-e-Quran, he helps students learn and recite the Holy Quran. He encourages students to improve through regular practice."
+    },
+    {
+        name: "Anis Muhammad",
+        role: "Hafiz-e-Quran",
+        image: "teacher/file_0000000089c48211b0d75ff69726aa6e.png",
+        age: "22 years",
+        experience: "4 years",
+        qualification: "Hafiz-e-Quran",
+        bio: "Anis Muhammad is a dedicated Quran teacher with four years of teaching experience. He helps students learn and recite the Holy Quran with care and attention. He encourages students to improve their recitation through regular practice."
+    },
+    {
+        name: "Hafiz Awais",
+        role: "Alim and Hafiz-e-Quran",
+        image: "teacher/file_00000000ac24821198946d25d5151a38.png",
+        age: "21 years",
+        experience: "3 years",
+        qualification: "Alim and Hafiz-e-Quran",
+        bio: "Hafiz Awais is an Alim and Hafiz-e-Quran with three years of teaching experience. He helps students learn the Holy Quran and develop a better understanding of Islamic teachings. He aims to create a supportive learning environment."
     }
 ];
 
@@ -235,17 +263,23 @@ function updateTeacherSlide() {
     document.getElementById("teacher-slide").alt = teacher.name;
     document.getElementById("teacher-name").textContent = teacher.name;
     document.getElementById("teacher-role").textContent = teacher.role;
+
+    document.getElementById("teacher-profile").style.display = "none";
 }
 
 function showTeacherProfile() {
     const teacher = teachers[currentTeacher];
 
     document.getElementById("profile-name").textContent = teacher.name;
-    document.getElementById("profile-age").textContent = "Age: " + teacher.age;
+    document.getElementById("profile-age").textContent =
+        "Age: " + teacher.age;
+
     document.getElementById("profile-experience").textContent =
         "Teaching Experience: " + teacher.experience;
+
     document.getElementById("profile-qualification").textContent =
         "Qualification: " + teacher.qualification;
+
     document.getElementById("profile-bio").textContent = teacher.bio;
 
     document.getElementById("teacher-profile").style.display = "block";
@@ -260,7 +294,8 @@ setInterval(function () {
     updateTeacherSlide();
 }, 2000);
 </script>
-
+    
+    
             <article class="card">
                 <h3>Female Quran Teacher</h3>
                 <p>
