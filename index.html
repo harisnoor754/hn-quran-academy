@@ -164,58 +164,110 @@
 </div>
     </details>
     </section>
+<section id="teachers">
 
-    <section id="teachers">
-        <h2>Our Teachers</h2>
+    <h2>Our Teachers</h2>
 
-        <div class="cards">
+    <div class="cards">
 
-            <article class="card">
-                <h2>Our Teachers</h2>
+        <!-- MALE TEACHERS -->
+        <article class="card">
 
-<div class="cards">
+            <h3>Male Quran Teachers</h3>
 
-    <article class="card">
-        <h3>Male Quran Teachers</h3>
+            <div style="text-align: center;">
 
-        <div style="text-align: center;">
+                <img id="teacher-slide"
+                     src="teacher/file_0000000028e0821188f1ac731dc628ce.png"
+                     alt="Muhammad Haris"
+                     style="width: 100%; max-width: 280px; height: 220px; object-fit: contain; border-radius: 10px;">
 
-            <img id="teacher-slide"
-                 src="teacher/file_0000000028e0821188f1ac731dc628ce.png"
-                 alt="Muhammad Haris"
-                 style="width: 100%; max-width: 280px; height: 220px; object-fit: contain; border-radius: 10px;">
+                <h3 id="teacher-name">Muhammad Haris</h3>
 
-            <h3 id="teacher-name">Muhammad Haris</h3>
+                <p id="teacher-role">CEO of HN Quran Academy</p>
 
-            <p id="teacher-role">CEO of HN Quran Academy</p>
+                <button type="button" onclick="showTeacherProfile()">
+                    View Profile
+                </button>
 
-            <button id="view-profile" type="button"
-                    onclick="showTeacherProfile()">
-                View Profile
-            </button>
+            </div>
 
-        </div>
+            <div id="teacher-profile"
+                 style="display: none; margin-top: 20px; text-align: left;">
 
-        <div id="teacher-profile"
-             style="display: none; margin-top: 20px; text-align: left;">
+                <h3 id="profile-name"></h3>
+                <p id="profile-age"></p>
+                <p id="profile-experience"></p>
+                <p id="profile-qualification"></p>
+                <p id="profile-bio"></p>
 
-            <h3 id="profile-name"></h3>
-            <p id="profile-age"></p>
-            <p id="profile-experience"></p>
-            <p id="profile-qualification"></p>
-            <p id="profile-bio"></p>
+                <button type="button" onclick="closeTeacherProfile()">
+                    Close Profile
+                </button>
 
-            <button type="button" onclick="closeTeacherProfile()">
-                Close Profile
-            </button>
+            </div>
 
-        </div>
-    </article>
+        </article>
 
-</div>
+
+        <!-- FEMALE TEACHERS -->
+        <article class="card">
+
+            <h3>Female Quran Teachers</h3>
+
+            <div style="text-align: center;">
+
+                <img id="female-teacher-slide"
+                     src="teacher/file_000000000450821184c5624f0d2456af.png"
+                     alt="Sidra"
+                     style="width: 100%; max-width: 280px; height: 220px; object-fit: contain; border-radius: 10px;">
+
+                <h3 id="female-teacher-name">Sidra</h3>
+
+                <p id="female-teacher-role">Female Quran Teacher</p>
+
+                <button type="button" onclick="showFemaleTeacherProfile()">
+                    View Profile
+                </button>
+
+            </div>
+
+            <div id="female-teacher-profile"
+                 style="display: none; margin-top: 20px; text-align: left;">
+
+                <h3 id="female-profile-name"></h3>
+                <p id="female-profile-age"></p>
+                <p id="female-profile-experience"></p>
+                <p id="female-profile-qualification"></p>
+                <p id="female-profile-subjects"></p>
+                <p id="female-profile-bio"></p>
+
+                <button type="button" onclick="closeFemaleTeacherProfile()">
+                    Close Profile
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <p class="note">
+        Contact us to discuss your preferred class schedule
+        and teacher availability.
+    </p>
+
+</section>
+
 
 <script>
+
+// ===============================
+// MALE TEACHERS
+// ===============================
+
 const teachers = [
+
     {
         name: "Muhammad Haris",
         role: "CEO of HN Quran Academy",
@@ -223,8 +275,9 @@ const teachers = [
         age: "25 years",
         experience: "8 years",
         qualification: "Hafiz-e-Quran and Qari",
-        bio: "Muhammad Haris is the CEO of HN Quran Academy and a dedicated Quran teacher with eight years of teaching experience. As a Hafiz-e-Quran and Qari, he focuses on correct Quran recitation and Tajweed. He aims to provide a friendly and supportive learning environment for students."
+        bio: "Muhammad Haris is the CEO of HN Quran Academy. He has eight years of teaching experience and focuses on correct Quran recitation and Tajweed."
     },
+
     {
         name: "Muhammad Sohaib",
         role: "Quran Teacher",
@@ -232,8 +285,9 @@ const teachers = [
         age: "22 years",
         experience: "5 years",
         qualification: "Hafiz-e-Quran",
-        bio: "Muhammad Sohaib is a dedicated Quran teacher with five years of teaching experience. As a Hafiz-e-Quran, he helps students learn and recite the Holy Quran. He encourages students to improve through regular practice."
+        bio: "Muhammad Sohaib is a dedicated Quran teacher with five years of teaching experience. He helps students learn and recite the Holy Quran through regular practice."
     },
+
     {
         name: "Anis Muhammad",
         role: "Hafiz-e-Quran",
@@ -241,8 +295,9 @@ const teachers = [
         age: "22 years",
         experience: "4 years",
         qualification: "Hafiz-e-Quran",
-        bio: "Anis Muhammad is a dedicated Quran teacher with four years of teaching experience. He helps students learn and recite the Holy Quran with care and attention. He encourages students to improve their recitation through regular practice."
+        bio: "Anis Muhammad is a dedicated Quran teacher with four years of teaching experience. He helps students learn and recite the Holy Quran with care and attention."
     },
+
     {
         name: "Hafiz Awais",
         role: "Alim and Hafiz-e-Quran",
@@ -250,27 +305,33 @@ const teachers = [
         age: "21 years",
         experience: "3 years",
         qualification: "Alim and Hafiz-e-Quran",
-        bio: "Hafiz Awais is an Alim and Hafiz-e-Quran with three years of teaching experience. He helps students learn the Holy Quran and develop a better understanding of Islamic teachings. He aims to create a supportive learning environment."
+        bio: "Hafiz Awais is an Alim and Hafiz-e-Quran with three years of teaching experience. He helps students learn the Holy Quran and understand Islamic teachings."
     }
+
 ];
 
 let currentTeacher = 0;
 
 function updateTeacherSlide() {
+
     const teacher = teachers[currentTeacher];
 
     document.getElementById("teacher-slide").src = teacher.image;
     document.getElementById("teacher-slide").alt = teacher.name;
+
     document.getElementById("teacher-name").textContent = teacher.name;
     document.getElementById("teacher-role").textContent = teacher.role;
 
     document.getElementById("teacher-profile").style.display = "none";
+
 }
 
 function showTeacherProfile() {
+
     const teacher = teachers[currentTeacher];
 
     document.getElementById("profile-name").textContent = teacher.name;
+
     document.getElementById("profile-age").textContent =
         "Age: " + teacher.age;
 
@@ -283,34 +344,143 @@ function showTeacherProfile() {
     document.getElementById("profile-bio").textContent = teacher.bio;
 
     document.getElementById("teacher-profile").style.display = "block";
+
 }
 
 function closeTeacherProfile() {
+
     document.getElementById("teacher-profile").style.display = "none";
+
 }
 
+
+// ===============================
+// FEMALE TEACHERS
+// ===============================
+
+const femaleTeachers = [
+
+    {
+        name: "Sidra",
+        role: "Female Quran Teacher",
+        image: "teacher/file_000000000450821184c5624f0d2456af.png",
+        age: "27 years",
+        experience: "7 years",
+        qualification: "Hafiz-e-Quran",
+        subjects: "Quran Teaching",
+        bio: "Sidra is a dedicated Quran teacher with seven years of teaching experience. She helps students learn and recite the Holy Quran with care and attention."
+    },
+
+    {
+        name: "Sumayya",
+        role: "Female Quran Teacher",
+        image: "teacher/file_00000000a074821194f8702bd9f9af15.png",
+        age: "24 years",
+        experience: "5 years",
+        qualification: "Hafiz-e-Quran",
+        subjects: "Quran Teaching",
+        bio: "Sumayya is a dedicated Quran teacher with five years of teaching experience. She helps students improve their Quran recitation through regular practice."
+    },
+
+    {
+        name: "Habiba",
+        role: "Arabic Language, Tafsir & Arabic Grammar Teacher",
+        image: "teacher/file_00000000df60821191739dde160031bc.png",
+        age: "28 years",
+        experience: "7 years",
+        qualification: "Alima",
+        subjects: "Arabic Language, Tafsir and Arabic Grammar",
+        bio: "Habiba is an experienced teacher with seven years of teaching experience. She teaches Arabic Language, Tafsir and Arabic Grammar to help students improve their Arabic knowledge and understanding of the Quran."
+    },
+
+    {
+        name: "Noor",
+        role: "Manager of HN Quran Academy",
+        image: "teacher/file_00000000546882119c3a89ab2fd983fe.png",
+        age: "24 years",
+        experience: "6 years",
+        qualification: "Mufassir-ul-Quran and B.S. Economics",
+        subjects: "Tafsir and Mathematics",
+        bio: "Noor is the Manager of HN Quran Academy. She has six years of teaching experience and qualifications in Quranic Tafsir and Economics. She teaches Tafsir and Mathematics."
+    }
+
+];
+
+let currentFemaleTeacher = 0;
+
+function updateFemaleTeacherSlide() {
+
+    const teacher = femaleTeachers[currentFemaleTeacher];
+
+    document.getElementById("female-teacher-slide").src = teacher.image;
+    document.getElementById("female-teacher-slide").alt = teacher.name;
+
+    document.getElementById("female-teacher-name").textContent = teacher.name;
+    document.getElementById("female-teacher-role").textContent = teacher.role;
+
+    document.getElementById("female-teacher-profile").style.display = "none";
+
+}
+
+function showFemaleTeacherProfile() {
+
+    const teacher = femaleTeachers[currentFemaleTeacher];
+
+    document.getElementById("female-profile-name").textContent = teacher.name;
+
+    document.getElementById("female-profile-age").textContent =
+        "Age: " + teacher.age;
+
+    document.getElementById("female-profile-experience").textContent =
+        "Teaching Experience: " + teacher.experience;
+
+    document.getElementById("female-profile-qualification").textContent =
+        "Qualification: " + teacher.qualification;
+
+    document.getElementById("female-profile-subjects").textContent =
+        "Subjects: " + teacher.subjects;
+
+    document.getElementById("female-profile-bio").textContent = teacher.bio;
+
+    document.getElementById("female-teacher-profile").style.display = "block";
+
+}
+
+function closeFemaleTeacherProfile() {
+
+    document.getElementById("female-teacher-profile").style.display = "none";
+
+}
+
+
+// ===============================
+// AUTOMATIC SLIDERS
+// ===============================
+
 setInterval(function () {
+
     currentTeacher = (currentTeacher + 1) % teachers.length;
+
     updateTeacherSlide();
+
 }, 2000);
+
+
+setInterval(function () {
+
+    currentFemaleTeacher =
+        (currentFemaleTeacher + 1) % femaleTeachers.length;
+
+    updateFemaleTeacherSlide();
+
+}, 2000);
+
 </script>
     
+            
+        
     
-            <article class="card">
-                <h3>Female Quran Teacher</h3>
-                <p>
-                    Female-led classes can be arranged for girls
-                    and women, subject to teacher availability.
-                </p>
-            </article>
 
-        </div>
-
-        <p class="note">
-            Contact us to discuss your preferred class schedule
-            and teacher availability.
-        </p>
-    </section>
 
     <section id="fees">
         <h2>Flexible Fee Packages</h2>
