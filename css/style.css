@@ -280,3 +280,158 @@ header .academy-logo {
         max-width: 70px;
     }
 }
+/* ==============================
+   HN Quran Academy Fee Packages
+   ============================== */
+
+#fees.fees-section {
+    background: linear-gradient(135deg, #f0f8f2, #fff8e8);
+    border: 1px solid #e1ebe3;
+    padding: 45px 28px;
+}
+
+#fees .fees-intro {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+#fees .fees-duration {
+    font-size: 15px;
+    color: #53675c;
+    margin-bottom: 25px;
+}
+
+#fees .cards {
+    align-items: stretch;
+    gap: 22px;
+}
+
+#fees .fee-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px 23px;
+    border: 1px solid #dce9df;
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 7px 22px rgba(8, 60, 43, 0.08);
+}
+
+#fees .fee-card h3 {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+#fees .fee-subtitle {
+    text-align: center;
+    color: #64766b;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+#fees .fee-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 18px;
+    text-align: left;
+}
+
+#fees .fee-card li {
+    position: relative;
+    padding: 8px 0 8px 25px;
+    border-bottom: 1px solid #edf2ee;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#fees .fee-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+#fees .fee-price {
+    color: var(--green);
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+#fees .fee-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--green);
+    color: var(--white);
+    font-weight: bold;
+    padding: 12px 14px;
+    margin-top: 18px;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#fees .fee-button:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+#fees .popular-package {
+    border: 2px solid var(--gold);
+    box-shadow: 0 9px 28px rgba(8, 60, 43, 0.12);
+}
+
+#fees .popular-badge {
+    display: block;
+    width: fit-content;
+    margin: -18px auto 15px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: var(--gold);
+    color: #25352d;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#fees .family-package {
+    border-top: 4px solid var(--green);
+}
+
+#fees .fees-note {
+    margin-top: 28px;
+    font-size: 14px;
+    color: #53675c;
+}
+
+/* Fee cards on mobile */
+@media (max-width: 800px) {
+    #fees .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    #fees.fees-section {
+        padding: 30px 15px;
+    }
+
+    #fees .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #fees .fee-card {
+        padding: 27px 19px;
+    }
+
+    #fees .fee-card h3 {
+        font-size: 22px;
+    }
+}
