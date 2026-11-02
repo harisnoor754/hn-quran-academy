@@ -535,42 +535,49 @@ header .academy-logo {
     }
 }
 
-/* Additional Islamic Courses - Image Size Fix */
+
+/* FIX ADDITIONAL COURSE IMAGES */
 
 #additional-courses .cards {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    width: 100% !important;
 }
 
-#additional-courses .cards .card {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
+#additional-courses .cards article.card {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
 }
 
-#additional-courses .cards .card img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 180px;
-    object-fit: contain;
-    box-sizing: border-box;
+#additional-courses .cards article.card img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    height: 170px !important;
+    max-height: 170px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
 }
 
-/* Mobile Screen */
+/* MOBILE FIX */
 @media (max-width: 600px) {
-    #additional-courses .cards {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    #additional-courses .cards article.card {
+        max-width: 300px !important;
     }
 
-    #additional-courses .cards .card img {
-        height: 160px;
+    #additional-courses .cards article.card img {
+        max-width: 260px !important;
+        height: 150px !important;
+        max-height: 150px !important;
     }
 }
+
 
