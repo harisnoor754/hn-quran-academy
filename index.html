@@ -561,6 +561,17 @@
         document.getElementById("teacher-role").textContent = teacher.role;
 
         document.getElementById("teacher-profile").style.display = "none";
+                const maleElements = [
+            document.getElementById("teacher-slide"),
+            document.getElementById("teacher-name"),
+            document.getElementById("teacher-role")
+        ];
+
+        maleElements.forEach(function(element) {
+            element.classList.remove("hn-teacher-animate");
+            void element.offsetWidth;
+            element.classList.add("hn-teacher-animate");
+        });
     }
 
     function showTeacherProfile() {
