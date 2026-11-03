@@ -580,6 +580,17 @@
 
     function closeTeacherProfile() {
         document.getElementById("teacher-profile").style.display = "none";
+                const femaleElements = [
+            document.getElementById("female-teacher-slide"),
+            document.getElementById("female-teacher-name"),
+            document.getElementById("female-teacher-role")
+        ];
+
+        femaleElements.forEach(function(element) {
+            element.classList.remove("hn-teacher-animate");
+            void element.offsetWidth;
+            element.classList.add("hn-teacher-animate");
+        });
     }
 
 
