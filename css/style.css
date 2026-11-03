@@ -696,3 +696,91 @@ header .academy-logo {
     }
 }
 
+/* PREMIUM MULTI-COLOR COURSE CARDS */
+
+#courses .cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px !important;
+    align-items: stretch;
+}
+
+#courses .cards .card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 22px 16px !important;
+    border: 1px solid #d9b65b !important;
+    border-radius: 18px !important;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(0,0,0,.13);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+#courses .cards .card:nth-child(4n+1) {
+    background: linear-gradient(145deg, #063c30, #087653) !important;
+    color: #fff !important;
+}
+
+#courses .cards .card:nth-child(4n+2) {
+    background: linear-gradient(145deg, #102b50, #245b85) !important;
+    color: #fff !important;
+}
+
+#courses .cards .card:nth-child(4n+3) {
+    background: linear-gradient(145deg, #f8edcf, #e8d49d) !important;
+    color: #263b2d !important;
+}
+
+#courses .cards .card:nth-child(4n+4) {
+    background: linear-gradient(145deg, #3d2855, #79528c) !important;
+    color: #fff !important;
+}
+
+#courses .cards .card h3 {
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 12px 0;
+    color: inherit !important;
+}
+
+#courses .cards .card p {
+    color: inherit !important;
+    line-height: 1.8;
+}
+
+#courses .cards .card img {
+    border-radius: 12px;
+    transition: transform .35s ease;
+}
+
+#courses .cards .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 28px rgba(0,0,0,.22);
+}
+
+#courses .cards .card:hover img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+    #courses .cards {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    #courses .cards .card {
+        max-width: 340px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #courses .cards .card,
+    #courses .cards .card img {
+        transition: none;
+    }
+}
+
+
