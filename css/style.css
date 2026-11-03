@@ -1150,6 +1150,131 @@ header .academy-logo {
     }
 }
 
+/* PREMIUM HN QURAN ACADEMY TEACHER BOXES */
+
+#teachers > h2 {
+    color: #0b513b;
+    text-align: center;
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+#teachers > p {
+    text-align: center;
+    line-height: 1.9;
+}
+
+/* BOTH TEACHER BOXES */
+#teachers > .cards > article.card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 25px 18px !important;
+    border: 2px solid #d9b65b !important;
+    border-radius: 22px !important;
+    box-shadow: 0 9px 25px rgba(0,0,0,.16);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+/* MALE TEACHER BOX */
+#teachers > .cards > article.card:nth-child(1) {
+    background: linear-gradient(145deg, #063c30, #087653) !important;
+    color: #ffffff !important;
+}
+
+/* FEMALE TEACHER BOX */
+#teachers > .cards > article.card:nth-child(2) {
+    background: linear-gradient(145deg, #102b50, #28638c) !important;
+    color: #ffffff !important;
+}
+
+/* HEADINGS */
+#teachers > .cards > article.card h3 {
+    color: #ffe3a0 !important;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* DESCRIPTIONS */
+#teachers > .cards > article.card p {
+    color: #ffffff !important;
+    line-height: 1.9;
+}
+
+/* TEACHER PHOTOS */
+#teachers #teacher-slide,
+#teachers #female-teacher-slide {
+    border: 4px solid #f4d58a;
+    border-radius: 18px !important;
+    padding: 5px;
+    background: rgba(255,255,255,.10);
+    box-shadow: 0 0 22px rgba(255,215,120,.35);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+#teachers #teacher-slide:hover,
+#teachers #female-teacher-slide:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(255,215,120,.7);
+}
+
+/* VIEW PROFILE AND CLOSE BUTTONS */
+#teachers > .cards > article.card button {
+    display: inline-block;
+    margin: 12px 5px;
+    padding: 11px 23px;
+    border: 2px solid #ffe3a0;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #d9b65b, #ffe3a0);
+    color: #123c2d !important;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+#teachers > .cards > article.card button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+/* PROFILE DETAILS */
+#teachers #teacher-profile,
+#teachers #female-teacher-profile {
+    padding: 15px !important;
+    border: 1px solid #d9b65b;
+    border-radius: 15px;
+    background: rgba(255,255,255,.10);
+}
+
+/* BOX HOVER */
+#teachers > .cards > article.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 32px rgba(0,0,0,.24);
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 600px) {
+    #teachers > .cards > article.card {
+        padding: 20px 14px !important;
+    }
+
+    #teachers #teacher-slide,
+    #teachers #female-teacher-slide {
+        max-width: 250px !important;
+    }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    #teachers > .cards > article.card,
+    #teachers #teacher-slide,
+    #teachers #female-teacher-slide,
+    #teachers > .cards > article.card button {
+        transition: none !important;
+    }
+}
+
+
 
 
 
