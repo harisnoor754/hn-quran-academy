@@ -783,4 +783,69 @@ header .academy-logo {
     }
 }
 
+/* PREMIUM ADDITIONAL ISLAMIC COURSE CARDS */
+
+#additional-courses details.card {
+    background: linear-gradient(135deg, #063c30, #087653) !important;
+    color: #ffe3a0 !important;
+    border: 2px solid #d9b65b !important;
+    border-radius: 20px !important;
+    padding: 20px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+#additional-courses details > summary {
+    color: #ffe3a0 !important;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#additional-courses .cards article.card {
+    border: 2px solid #d9b65b !important;
+    border-radius: 17px !important;
+    padding: 16px !important;
+    text-align: center;
+    box-shadow: 0 7px 18px rgba(0,0,0,.15);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+#additional-courses .cards article.card:nth-child(4n+1) {
+    background: linear-gradient(145deg, #102b50, #245b85) !important;
+    color: #fff !important;
+}
+
+#additional-courses .cards article.card:nth-child(4n+2) {
+    background: linear-gradient(145deg, #f8edcf, #e8d49d) !important;
+    color: #263b2d !important;
+}
+
+#additional-courses .cards article.card:nth-child(4n+3) {
+    background: linear-gradient(145deg, #3d2855, #79528c) !important;
+    color: #fff !important;
+}
+
+#additional-courses .cards article.card:nth-child(4n+4) {
+    background: linear-gradient(145deg, #063c30, #087653) !important;
+    color: #fff !important;
+}
+
+#additional-courses .cards article.card h3,
+#additional-courses .cards article.card p {
+    color: inherit !important;
+}
+
+#additional-courses .cards article.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 13px 25px rgba(0,0,0,.23);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #additional-courses .cards article.card {
+        transition: none;
+    }
+}
+
+
 
