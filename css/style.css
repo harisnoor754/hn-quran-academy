@@ -847,5 +847,28 @@ header .academy-logo {
     }
 }
 
+/* PREMIUM TEACHER FADE + SMOOTH SLIDE ANIMATION */
+
+.hn-teacher-animate {
+    animation: hnTeacherFadeSlide 0.9s ease-out both;
+}
+
+@keyframes hnTeacherFadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hn-teacher-animate {
+        animation: none !important;
+    }
+}
 
 
